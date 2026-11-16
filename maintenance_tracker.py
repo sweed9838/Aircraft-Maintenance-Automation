@@ -31,3 +31,15 @@ print("\nMAINTENANCE SUMMARY")
 print(f"Total Records: {len(maintenance_records)}")
 print(f"Open Discrepancies: {open_count}")
 print(f"Closed Discrepancies: {closed_count}")
+
+
+# Calculate maintenance completion percentage
+total_records = len(maintenance_records)
+
+if total_records > 0:
+    completion_rate = (closed_count / total_records) * 100
+else:
+    completion_rate = 0
+
+print(f"Maintenance Completion Rate: {completion_rate:.1f}%")
+
